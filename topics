@@ -1,0 +1,242 @@
+# SQL Zero to Hero 🚀 — Topics 1 to 9 with Queries
+
+Here is your SQL learning roadmap from Topic 1 to Topic 9, with topic names, explanations, and practice queries. You can use this as your revision notes.
+
+## Topic 1: Introduction to SQL
+
+Definition: SQL (Structured Query Language) is used to create, retrieve, update, and delete data in relational databases.
+
+Common databases: MySQL, Oracle, SQL Server, and PostgreSQL.
+
+Example:
+
+sql
+```
+SELECT 'Hello SQL' AS message;
+```
+
+## Topic 2: Database and Table Basics
+
+Learn how to create a database, select it, and create a table.
+
+sql
+```
+CREATE DATABASE CompanyDB;
+```
+
+sql
+```
+USE CompanyDB;
+```
+
+sql
+```
+CREATE TABLE Employees (
+    emp_id INT,
+    emp_name VARCHAR(50),
+    age INT,
+    salary DECIMAL(10,2),
+    department VARCHAR(30)
+);
+```
+
+## Topic 3: SQL Data Types
+
+Learn common data types used to store different kinds of information.
+
+- `INT` — whole numbers
+- `VARCHAR(n)` — variable-length text
+- `CHAR(n)` — fixed-length text
+- `DATE` — dates
+- `DECIMAL(p,s)` — exact decimal values
+- `FLOAT` — approximate decimal values
+
+Example:
+
+sql
+```
+CREATE TABLE Students (
+    student_id INT,
+    student_name VARCHAR(100),
+    dob DATE,
+    marks DECIMAL(5,2)
+);
+```
+
+## Topic 4: INSERT Statement
+
+Used to insert new records into a table.
+
+sql
+```
+INSERT INTO Employees
+(emp_id, emp_name, age, salary, department)
+VALUES
+(1, 'Ravi', 25, 30000, 'IT'),
+(2, 'Priya', 28, 45000, 'HR'),
+(3, 'Arun', 30, 50000, 'IT'),
+(4, 'Sneha', 24, 28000, 'Sales'),
+(5, 'Kiran', 32, 60000, 'Finance');
+```
+
+## Topic 5: SELECT Statement
+
+Used to retrieve data from a table.
+
+sql
+```
+-- Display all columns and rows
+SELECT * FROM Employees;
+
+-- Display selected columns
+SELECT emp_name, salary FROM Employees;
+
+-- Display unique departments
+SELECT DISTINCT department FROM Employees;
+
+-- Display only three records
+SELECT * FROM Employees
+LIMIT 3;
+```
+
+Note: `LIMIT` is supported in MySQL and PostgreSQL. SQL Server uses `TOP` or `OFFSET/FETCH` for similar tasks.
+
+## Topic 6: WHERE Clause and Operators
+
+Used to filter records based on conditions.
+
+sql
+```
+-- Employees earning more than 30000
+SELECT * FROM Employees
+WHERE salary > 30000;
+
+-- Employees in the IT department
+SELECT * FROM Employees
+WHERE department = 'IT';
+
+-- Employees aged between 25 and 30
+SELECT * FROM Employees
+WHERE age BETWEEN 25 AND 30;
+
+-- Employees from IT or HR
+SELECT * FROM Employees
+WHERE department IN ('IT', 'HR');
+
+-- Employees whose names start with S
+SELECT * FROM Employees
+WHERE emp_name LIKE 'S%';
+
+-- Employees earning at least 30000 and aged under 30
+SELECT * FROM Employees
+WHERE salary >= 30000 AND age < 30;
+```
+
+Operators to remember: `=`, `<>`, `>`, `<`, `>=`, `<=`, `AND`, `OR`, `NOT`, `IN`, `BETWEEN`, and `LIKE`.
+
+## Topic 7: ORDER BY Clause
+
+Used to sort query results in ascending or descending order.
+
+sql
+```
+-- Lowest salary first
+SELECT * FROM Employees
+ORDER BY salary ASC;
+
+-- Highest salary first
+SELECT * FROM Employees
+ORDER BY salary DESC;
+
+-- Sort by department, then salary
+SELECT * FROM Employees
+ORDER BY department ASC, salary DESC;
+```
+
+`ASC` means ascending, and `DESC` means descending.
+
+## Topic 8: Aggregate Functions
+
+Aggregate functions calculate a single result from multiple rows.
+
+sql
+```
+-- Count employees
+SELECT COUNT(*) AS total_employees
+FROM Employees;
+
+-- Calculate total salary
+SELECT SUM(salary) AS total_salary
+FROM Employees;
+
+-- Calculate average salary
+SELECT AVG(salary) AS average_salary
+FROM Employees;
+
+-- Find the highest salary
+SELECT MAX(salary) AS highest_salary
+FROM Employees;
+
+-- Find the lowest salary
+SELECT MIN(salary) AS lowest_salary
+FROM Employees;
+```
+
+## Topic 9: GROUP BY and HAVING
+
+`GROUP BY` groups records with matching values. `HAVING` filters the resulting groups based on a condition.
+
+sql
+```
+-- Count employees in each department
+SELECT department, COUNT(*) AS employee_count
+FROM Employees
+GROUP BY department;
+
+-- Calculate average salary in each department
+SELECT department, AVG(salary) AS average_salary
+FROM Employees
+GROUP BY department;
+
+-- Departments with more than one employee
+SELECT department, COUNT(*) AS employee_count
+FROM Employees
+GROUP BY department
+HAVING COUNT(*) > 1;
+
+-- Departments with average salary above 35000
+SELECT department, AVG(salary) AS average_salary
+FROM Employees
+GROUP BY department
+HAVING AVG(salary) > 35000;
+
+-- Group departments and show highest salaries first
+SELECT department, MAX(salary) AS highest_salary
+FROM Employees
+GROUP BY department
+ORDER BY highest_salary DESC;
+```
+
+## Quick revision checklist
+
+### Your learning progress
+
+0 of 9 reviewed
+
+[ ]1\. Introduction to SQL
+
+[ ]2\. Database and Table Basics
+
+[ ]3\. SQL Data Types
+
+[ ]4\. INSERT Statement
+
+[ ]5\. SELECT Statement
+
+[ ]6\. WHERE and Operators
+
+[ ]7\. ORDER BY
+
+[ ]8\. Aggregate Functions
+
+[ ]9\. GROUP BY and HAVING
