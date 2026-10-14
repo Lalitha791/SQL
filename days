@@ -1,0 +1,116 @@
+ 60-Day SQL Journey status, according to your roadmap and our previous lessons.
+
+# Your SQL Progress
+
+## SQL 0-to-Hero
+
+In progress
+
+# Day 13
+
+of 60 days
+
+13/60 roadmap days reached · 21.7%
+
+Days 1–12: SQL Fundamentals
+
+SELECT, filtering, operators, sorting, functions, GROUP BY, HAVING and CASE.
+
+Day 13: Data modification
+
+UPDATE, DELETE, ALTER TABLE and differences between DELETE, DROP and TRUNCATE.
+
+Day 14: Next lesson
+
+SQL constraints and keys.
+
+## Topics you've also practised
+
+- SQL joins: INNER, LEFT, RIGHT and FULL JOIN
+- Subqueries
+- `INSERT INTO ... SELECT`
+- Normalization: 1NF, 2NF, 3NF, BCNF, 4NF and 5NF
+- SQL injection
+- Pagination and `OFFSET`
+
+
+
+Lalitha, here are the SQL concepts you have learned so far in your 60-day SQL journey, based on our previous lessons and discussions.
+
+# SQL Concepts Learned — Days 1–13
+
+## 1. SQL Fundamentals
+
+- What is SQL and a database?
+- Tables, rows and columns
+- DDL, DML, DQL, DCL and TCL
+- `CREATE`, `SELECT`, `INSERT`, `UPDATE`, `DELETE`
+- `WHERE` clause
+- Comparison operators: `=`, `!=`, `>`, `<`, `>=`, `<=`
+- Logical operators: `AND`, `OR`, `NOT`
+- `IN`, `BETWEEN`, `LIKE`, `IS NULL`
+
+## 2. Sorting and Filtering
+
+- `ORDER BY` — ascending and descending order
+- `DISTINCT` — removing duplicate results
+- `LIMIT` and `OFFSET` — pagination
+- Aliases using `AS`
+
+## 3. SQL Functions
+
+- Aggregate functions: `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`
+- `GROUP BY`
+- `HAVING`
+- `CASE` expressions
+
+## 4. Data Modification
+
+- `INSERT INTO ... VALUES`
+- `INSERT INTO ... SELECT`
+- `UPDATE ... SET ... WHERE`
+- `DELETE ... WHERE`
+- `ALTER TABLE`
+- Adding and modifying columns
+- Differences between `DELETE`, `DROP` and `TRUNCATE`
+
+## 5. SQL Joins
+
+- `INNER JOIN`
+- `LEFT JOIN`
+- `RIGHT JOIN`
+- `FULL OUTER JOIN`
+- Matching records using `ON`
+- Handling unmatched rows and `NULL` values
+
+## 6. Subqueries
+
+- Queries inside other queries
+- Using subqueries with `WHERE`
+- Understanding how an inner query supplies results to an outer query
+
+## 7. Normalization
+
+- First Normal Form (1NF)
+- Second Normal Form (2NF)
+- Third Normal Form (3NF)
+- Boyce–Codd Normal Form (BCNF)
+- Fourth Normal Form (4NF)
+- Fifth Normal Form (5NF)
+- Data redundancy and anomalies: insertion, update and deletion anomalies
+
+## 8. Database Security
+
+- SQL injection
+- How unsafe query construction creates security risks
+- Why parameterized queries help prevent SQL injection
+
+## 9. Concepts to revise and practise more
+
+- Writing joins independently
+- Solving subquery problems
+- Practising `INSERT INTO ... SELECT`
+- Correct use of `UPDATE`, `DELETE` and `ALTER TABLE`
+- Applying normalization to sample tables
+- Writing complete queries without looking at notes
+
